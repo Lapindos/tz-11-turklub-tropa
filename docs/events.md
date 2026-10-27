@@ -25,7 +25,7 @@
 | `contact_click` | телефон и почта в шапке, подвале и на странице брони | `contact_type = phone` или `email` |
 | `messenger_click` | Telegram и WhatsApp на странице брони | `messenger = telegram` |
 | `social_click` | иконки в подвале и на `thanks.html` | `network = instagram`, `page_section = footer` |
-| `form_error` | `js/form.js`, строки 100, 207, 235, 248 | `field_name = phone`, `error_type = format` |
+| `form_error` | `js/form.js`, строки 100, 214, 242, 255 | `field_name = phone`, `error_type = format` |
 | `promo_copy` | кнопка «Скопировать» на `gear.html`, по выбору | `promo_code = SNOW300` |
 | `map_open` | ссылка на Яндекс Карты, по выбору | `map_service = yandex` |
 
