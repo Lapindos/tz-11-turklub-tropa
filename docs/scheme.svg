@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="760" viewBox="0 0 1400 760">
+  <rect width="1400" height="760" fill="#f4f8fa"/>
+  <text x="48" y="64" fill="#1f2a30" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700">"  · AE5<0 @01>BK</text>
+  <text x="48" y="100" fill="#2b6f8f" font-family="Inter, Arial, sans-serif" font-size="20">!>FA5BL 8;8 QR ’ A09B A <5B:0<8 ’ GA4 8 B01;8F0 1@>=8 ’ DataLens</text>
+  <g font-family="Inter, Arial, sans-serif" font-size="22" fill="#1f2a30">
+    <rect x="48" y="160" width="280" height="110" rx="18" fill="#ffffff" stroke="#2b6f8f" stroke-width="3"/>
+    <text x="72" y="208">!>FA5B8 8 QR</text>
+    <text x="72" y="240" font-size="16" fill="#4d5d67">AAK;:8 A UTM · @0745; 5</text>
+    <rect x="48" y="340" width="280" height="130" rx="18" fill="#fff6ee" stroke="#f08a24" stroke-width="3"/>
+    <text x="72" y="392">Instagram · ManyChat</text>
+    <text x="72" y="424" font-size="16" fill="#4d5d67">! / 8 '</text>
+    <rect x="460" y="250" width="300" height="140" rx="18" fill="#e2eff5" stroke="#2b6f8f" stroke-width="3"/>
+    <text x="484" y="306">!09B =0 Vercel</text>
+    <text x="484" y="342" font-size="16" fill="#4d5d67">8 AB@0=8F · tz-11-turklub-tropa</text>
+    <rect x="900" y="150" width="300" height="120" rx="18" fill="#fff6e0" stroke="#e5bd59" stroke-width="3"/>
+    <text x="924" y="202">Google Analytics 4</text>
+    <text x="924" y="234" font-size="16" fill="#4d5d67">"   A09B · 20 A>1KB89</text>
+    <rect x="900" y="390" width="300" height="130" rx="18" fill="#e7f5ea" stroke="#86c497" stroke-width="3"/>
+    <text x="924" y="442">Google "01;8F0</text>
+    <text x="924" y="474" font-size="16" fill="#4d5d67">Tropa  Bookings · ;8AB leads</text>
+    <rect x="1040" y="580" width="300" height="120" rx="18" fill="#eaf0fd" stroke="#8ba7e8" stroke-width="3"/>
+    <text x="1064" y="632">Yandex DataLens</text>
+    <text x="1064" y="664" font-size="16" fill="#4d5d67">"   winter_trips_2026</text>
+  </g>
+  <g fill="none" stroke="#1f2a30" stroke-width="3" marker-end="url(#arrow)">
+    <defs>
+      <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+        <path d="M0,0 L12,6 L0,12 Z" fill="#1f2a30"/>
+      </marker>
+    </defs>
+    <path d="M328 215 C390 215, 400 290, 460 300"/>
+    <path d="M328 405 C390 405, 400 360, 460 340"/>
+    <path d="M760 290 C830 250, 850 210, 900 210"/>
+    <path d="M760 340 C830 390, 850 440, 900 450"/>
+    <path d="M1050 510 C1080 540, 1100 560, 1120 580"/>
+    <path d="M1050 270 C1200 270, 1240 520, 1240 580"/>
+  </g>
+  <g font-family="Inter, Arial, sans-serif" font-size="16" fill="#1f2a30">
+    <text x="360" y="250">?5@5E>4</text>
+    <text x="350" y="390">:=>?:0 2 Direct</text>
+    <text x="790" y="250">A>1KB8O</text>
+    <text x="790" y="400">70O2:0</text>
+  </g>
+</svg>
