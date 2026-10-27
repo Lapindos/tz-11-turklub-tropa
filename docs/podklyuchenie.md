@@ -53,7 +53,7 @@ request_id  created_at  name  phone  email  trip_id  trip_date  participants  ut
 ```
 
 4. Закрепить первую строку. Правила списка, подсветки и доступ — в `apps-script/SHEET.md`.
-5. Расширения → Apps Script. Вставить `apps-script/Code.gs`. В `SPREADSHEET_ID` поставить кусок адреса таблицы между `/d/` и `/edit`. Часовой пояс проекта: Москва.
+5. Расширения → Apps Script. В `apps-script/Code.gs` уже стоит `SPREADSHEET_ID` этой таблицы: `1ZLM24IaAxxZD_8cTvjclcxQXcrtQNBvTFSGy9eFHn1E`. Часовой пояс проекта: Москва. Таблица: https://docs.google.com/spreadsheets/d/1ZLM24IaAxxZD_8cTvjclcxQXcrtQNBvTFSGy9eFHn1E/edit?usp=sharing
 6. Развернуть → Новое развёртывание → Тип: веб-приложение. Запускать от вашего имени. У кого есть доступ: «Все».
 7. URL развёртывания, он заканчивается на `/exec`, уже стоит в `js/config.js`:
 

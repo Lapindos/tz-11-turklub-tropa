@@ -12,7 +12,7 @@
 | Что | Ссылка |
 |---|---|
 | Сайт | https://tz-11-turklub-tropa.vercel.app |
-| Таблица заявок | приёмник подключён в [js/config.js](js/config.js). Ссылку на просмотр таблицы исполнитель открывает заказчику |
+| Таблица заявок | [Tropa — Bookings](https://docs.google.com/spreadsheets/d/1ZLM24IaAxxZD_8cTvjclcxQXcrtQNBvTFSGy9eFHn1E/edit?usp=sharing) |
 | Дашборд DataLens | после выгрузки GA4, состав вкладок в [docs/datalens.md](docs/datalens.md) |
 | Instagram и Reel с автоответом | тексты веток в [docs/manychat.md](docs/manychat.md), аккаунт `tropa_hiking` создаёт исполнитель |
 | ВКонтакте · Telegram · YouTube | публикации по реестру [docs/utm.csv](docs/utm.csv) |

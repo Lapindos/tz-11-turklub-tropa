@@ -1,7 +1,6 @@
 // Приёмник заявок турклуба «Тропа». Основа — приёмник темы 7 курса.
-// Вставьте ID таблицы (кусок адреса между /d/ и /edit) и опубликуйте
-// веб-приложение: выполнять от вашего имени, доступ «Все».
-const SPREADSHEET_ID = 'PASTE_YOUR_SPREADSHEET_ID';
+// Веб-приложение уже опубликовано: выполнять от имени владельца, доступ «Все».
+const SPREADSHEET_ID = '1ZLM24IaAxxZD_8cTvjclcxQXcrtQNBvTFSGy9eFHn1E';
 
 const HEADERS = [
   'request_id', 'created_at', 'name', 'phone', 'email',
