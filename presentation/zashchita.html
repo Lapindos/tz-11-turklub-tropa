@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Защита · ТРОПА</title>
+  <style>
+    @page { size: 13.333in 7.5in; margin: 0; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; }
+    body { font-family: Inter, Arial, sans-serif; color: #1f2a30; }
+    .slide {
+      width: 13.333in; height: 7.5in; padding: 0.55in 0.7in;
+      page-break-after: always; position: relative; background: #f4f8fa; overflow: hidden;
+    }
+    .slide:last-child { page-break-after: auto; }
+    h1 { font-family: "Russo One", Arial, sans-serif; font-size: 54px; line-height: 1.12; margin: 0 0 16px; }
+    h2 { font-family: "Russo One", Arial, sans-serif; font-size: 40px; margin: 0 0 18px; color: #2b6f8f; }
+    p, li { font-size: 28px; line-height: 1.35; }
+    .num { position: absolute; right: 0.45in; bottom: 0.32in; font-size: 22px; color: #2b6f8f; }
+    .brand { letter-spacing: 0.12em; color: #f08a24; font-weight: 700; font-size: 22px; }
+    table { width: 100%; border-collapse: collapse; font-size: 26px; }
+    th, td { border-bottom: 2px solid #d3e2ea; text-align: left; padding: 10px 8px; vertical-align: top; }
+    .facts { display: flex; gap: 18px; }
+    .facts div { background: #fff; border-radius: 18px; padding: 18px; flex: 1; }
+    .facts b { display: block; font-family: "Russo One", Arial, sans-serif; font-size: 42px; color: #2b6f8f; }
+    img.shot { width: 100%; max-height: 4.4in; object-fit: cover; border-radius: 16px; }
+    img.scheme { width: 100%; max-height: 5.2in; object-fit: contain; background: #fff; border-radius: 16px; }
+  </style>
+</head>
+<body>
+  <section class="slide">
+    <p class="brand">ТРОПА</p>
+    <h1>Сайт и сквозная аналитика заявок для турклуба «Тропа»</h1>
+    <p>ТЗ № 11/2026 · Марущак Сергей Григорьевич · группа РПО25/2 · ОП.03</p>
+    <span class="num">1</span>
+  </section>
+  <section class="slide">
+    <h2>Проблема заказчика</h2>
+    <div class="facts">
+      <div><b>2 000</b>участников в год</div>
+      <div><b>58</b>не получили другую дату</div>
+      <div><b>6</b>зимних маршрутов</div>
+      <div><b>16</b>человек в группе</div>
+    </div>
+    <p>Бронь жила в переписке Instagram и ВКонтакте. Если инструктор не успевал ответить, место занимал другой, а свободную дату не предлагали.</p>
+    <span class="num">2</span>
+  </section>
+  <section class="slide">
+    <h2>Схема решения</h2>
+    <img class="scheme" src="../docs/scheme.png" alt="Схема: соцсети, сайт, GA4, таблица, DataLens">
+    <span class="num">3</span>
+  </section>
+  <section class="slide">
+    <h2>Сайт</h2>
+    <img class="shot" src="../screens/kursovaya/01-site-home.png" alt="Главная страница">
+    <p>8 страниц и 404 · Vercel · статический HTML · календарь, чек-лист и калькулятор аренды</p>
+    <span class="num">4</span>
+  </section>
+  <section class="slide">
+    <h2>Путь заявки</h2>
+    <p>Ссылка с UTM → форма брони → строка в листе leads → событие generate_lead.</p>
+    <p>Событие уходит только после ответа приёмника ok: true. Метки не теряются при переходе между страницами: они лежат в sessionStorage.</p>
+    <p>Живой показ на защите: переход по ссылке U-01, заявка «Приёмка ТЗ-11/2026», строка в таблице.</p>
+    <span class="num">5</span>
+  </section>
+  <section class="slide">
+    <h2>Instagram → сайт</h2>
+    <p>Reel «Ночёвка в палатке при −15 °C».</p>
+    <p>Слово СНАРЯГА открывает чек-лист, ссылка U-02.</p>
+    <p>Слово НОВИЧОК открывает лёгкие маршруты, ссылка U-03, якорь #easy.</p>
+    <p>Тексты и кнопки собраны в docs/manychat.md. Аккаунт и Live включает исполнитель.</p>
+    <span class="num">6</span>
+  </section>
+  <section class="slide">
+    <h2>GA4: события и источники</h2>
+    <p>20 событий. Обязательные уже в коде, два — по выбору: promo_copy и map_open.</p>
+    <p>Ключевые только три: generate_lead, contact_click, messenger_click.</p>
+    <p>Ресурс называется «ТРОПА — сайт». Measurement ID вставляется в head вместо G-XXXXXXXXXX.</p>
+    <span class="num">7</span>
+  </section>
+  <section class="slide">
+    <h2>Воронка</h2>
+    <p>page_view → trip_filter → cta_click → form_start → generate_lead.</p>
+    <p>Открытая считает шаги отдельно. Закрытая требует тот же порядок в одном сеансе, поэтому последний шаг у неё не больше.</p>
+    <p>Проценты потерь снимаются из Explore после проверок. В слады они не подставлены.</p>
+    <span class="num">8</span>
+  </section>
+  <section class="slide">
+    <h2>Дашборд DataLens</h2>
+    <p>Три вкладки: Трафик, Заявки, Кампании.</p>
+    <p>На «Кампаниях» сеансы и generate_lead стоят рядом с заявками и статусом went. Связь только по источнику, кампании и дате.</p>
+    <p>Руководитель открывает одну ссылку и видит, какой канал приводит брони.</p>
+    <span class="num">9</span>
+  </section>
+  <section class="slide">
+    <h2>Что получил бизнес</h2>
+    <table>
+      <tr><th>Было</th><th>Стало</th></tr>
+      <tr><td>заявка в личных сообщениях</td><td>одна таблица со статусом</td></tr>
+      <tr><td>источник неизвестен</td><td>у брони есть source и campaign</td></tr>
+      <tr><td>мест нет — человек уходит</td><td>календарь ведёт на другую дату</td></tr>
+    </table>
+    <p>Рекомендация: после первых броней сравнить каналы по статусу prepaid и вести следующий пост туда, где предоплат больше.</p>
+    <span class="num">10</span>
+  </section>
+  <section class="slide">
+    <h2>ИИ и что было сложно</h2>
+    <p>Нейросеть собрала страницы, тексты по ТЗ, события и Apps Script.</p>
+    <p>Вручную перенесено generate_lead на ответ ok: true и убраны выдуманные километры и биографии инструкторов.</p>
+    <p>Не сделано из кода: аккаунты GA4, таблицы, соцсетей и DataLens. Их подключает исполнитель, места вставки описаны.</p>
+    <span class="num">11</span>
+  </section>
+  <section class="slide">
+    <h2>Ссылки</h2>
+    <p>Сайт: tz-11-turklub-tropa.vercel.app</p>
+    <p>Репозиторий: github.com/lapindos/tz-11-turklub-tropa</p>
+    <p>Подключение GA4 и таблицы: docs/podklyuchenie.md</p>
+    <span class="num">12</span>
+  </section>
+</body>
+</html>
