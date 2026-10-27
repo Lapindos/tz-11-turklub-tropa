@@ -13,8 +13,8 @@
 | `click` | расширенная статистика, внешняя ссылка | `link_url`, `outbound = true` |
 | `file_download` | расширенная статистика, ссылка на `/files/checklist.pdf` | `file_name = checklist.pdf` |
 | `form_start` | расширенная статистика, первое поле формы `#booking-form` | `form_id` |
-| `form_submit` | расширенная статистика, отправка формы | `form_id` |
-| `generate_lead` | `js/form.js`, строка 240, только после `{"ok": true}` | `lead_trip_id = snowshoes`, `participants = 2`, `lead_source = booking_form` |
+| `form_submit` | `js/form.js`, нажатие «Забронировать». Страница не перезагружается, поэтому расширенная статистика это нажатие не видит | `form_id = booking-form`, `form_destination`, `form_submit_text = Забронировать` |
+| `generate_lead` | `js/form.js`, строка 247, только после `{"ok": true}` | `lead_trip_id = snowshoes`, `participants = 2`, `lead_source = booking_form` |
 | `cta_click` | атрибут `data-event` на кнопках брони и героя | `button_name = hero_routes`, `page_section = hero` |
 | `trip_filter` | `js/site.js`, строка 107, смена фильтра | `difficulty = easy`, `duration_days = 1` или `all` |
 | `trip_view` | `data-event` на «Подробнее» и «Карточка маршрута» | `trip_id = icefalls`, `difficulty = easy` |

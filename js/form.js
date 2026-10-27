@@ -146,6 +146,13 @@
 
   form.addEventListener('submit', function (event) {
     event.preventDefault();
+    // Обычная отправка страницу не перезагружает, поэтому расширенная статистика
+    // не видит form_submit. Событие уходит отсюда в момент нажатия кнопки.
+    window.Tropa.track('form_submit', {
+      form_id: 'booking-form',
+      form_destination: window.location.pathname,
+      form_submit_text: 'Забронировать'
+    });
     clearErrors();
     fillUtm();
 
